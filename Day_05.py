@@ -37,7 +37,6 @@ def moves(a, b, c, places):
     for i in range(a):
         places[c-1].insert(0, places[b-1][0])
         places[b-1].pop(0)
-        #print(places1)
     return places
 
 def moves1(a, b, c, places1):
