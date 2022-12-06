@@ -1,4 +1,5 @@
 from time import perf_counter as pfc
+import copy
 
 start = pfc()
 
@@ -22,15 +23,7 @@ places = [["R", "Q", "G", "P", "C", "F"],
          ["J", "T", "P", "F", "C", "H", "L", "N"],
          ["W", "C", "T", "H", "Q", "Z", "V", "G"]]
 
-places1 = [["R", "Q", "G", "P", "C", "F"],
-          ["P", "C", "T", "W"],
-          ["C", "M", "P", "H", "B"],
-          ["R", "P", "M", "S", "Q", "T", "L"],
-          ["N", "G", "V", "Z", "J", "H", "P"],
-          ["J", "P", "D"],
-          ["R", "T", "J", "F", "Z", "P", "G", "L"],
-          ["J", "T", "P", "F", "C", "H", "L", "N"],
-          ["W", "C", "T", "H", "Q", "Z", "V", "G"]]
+places1 = copy.deepcopy(places)
 
 #######   Functions  ##########
 def moves(a, b, c, places):
